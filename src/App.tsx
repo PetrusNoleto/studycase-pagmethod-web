@@ -11,8 +11,8 @@ export default function App(){
           </header>
           <main>
               <nav className={stylesChosePagMethod.methodsLinksBox}>
-                  <PagBox boxLink={"/pix"} boxName={"pix"}/>
-                  <PagBox boxLink={"/mercadopago"} boxName={"mercado pago"}/>
+                  <PagBox boxLink={"/pix/"} boxName={"pix"}/>
+                  <PagBox boxLink={"/mercadopago/"} boxName={"mercado pago"}/>
               </nav>
           </main>
       </div>
