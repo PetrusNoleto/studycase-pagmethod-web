@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import stylesChosePagMethod from './assets/css/choseMethodPag.module.css'
+import PagBox from './components/pagBox/pagbox'
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
+export default function App(){
+  return(
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={stylesChosePagMethod.methodsBox}>
+          <header className={stylesChosePagMethod.methodsBoxHeader}>
+               <h1 className={stylesChosePagMethod.methodsBoxHeaderContent}>escolha um metodo de pagamento</h1> 
+          </header>
+          <main>
+              <nav className={stylesChosePagMethod.methodsLinksBox}>
+                  <PagBox boxLink={"/pix"} boxName={"pix"}/>
+                  <PagBox boxLink={"/mercadopago"} boxName={"mercado pago"}/>
+              </nav>
+          </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
-
-export default App
