@@ -1,6 +1,8 @@
 const MercadoLivrePage = ()=>{
     return(
-        <>mercado livre</>
+        <div>
+             
+        </div>
     )
 }
 export default MercadoLivrePage
